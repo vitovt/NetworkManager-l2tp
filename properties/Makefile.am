@@ -15,23 +15,18 @@ glade_DATA = nm-l2tp-dialog.glade
 libnm_l2tp_properties_la_CFLAGS =                    \
         $(GLADE_CFLAGS)                                 \
         $(GTK_CFLAGS)                                   \
-        $(GCONF_CFLAGS)                                 \
-        $(LIBGNOMEUI_CFLAGS)                            \
         $(GNOMEKEYRING_CFLAGS)                          \
         $(NM_UTILS_CFLAGS)                              \
         -DICONDIR=\""$(datadir)/pixmaps"\"              \
         -DGLADEDIR=\""$(gladedir)"\"                    \
         -DG_DISABLE_DEPRECATED                          \
         -DGDK_DISABLE_DEPRECATED                        \
-        -DGNOME_DISABLE_DEPRECATED                      \
-        -DGNOMELOCALEDIR=\"$(datadir)/locale\"          \
+	-DGTK_DISABLE_DEPRECATED                        \
         -DVERSION=\"$(VERSION)\"
 
 libnm_l2tp_properties_la_LIBADD =    \
         $(GLADE_LIBS)                   \
         $(GTK_LIBS)                     \
-        $(GCONF_LIBS)                   \
-        $(LIBGNOMEUI_LIBS)              \
         $(top_builddir)/common-gnome/libnm-l2tp-common-gnome.la	\
         $(NM_UTILS_LIBS)
 

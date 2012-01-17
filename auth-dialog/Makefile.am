@@ -13,8 +13,7 @@ nm_l2tp_auth_dialog_CPPFLAGS =			\
 	-DBINDIR=\""$(bindir)"\"		\
 	-DG_DISABLE_DEPRECATED			\
 	-DGDK_DISABLE_DEPRECATED		\
-	-DGNOME_DISABLE_DEPRECATED		\
-	-DGNOMELOCALEDIR=\"$(datadir)/locale\"	\
+        -DGTK_DISABLE_DEPRECATED 
 	-DVERSION=\"$(VERSION)\"
 
 nm_l2tp_auth_dialog_SOURCES =			\
@@ -24,7 +23,6 @@ nm_l2tp_auth_dialog_SOURCES =			\
 
 nm_l2tp_auth_dialog_LDADD =			\
 	$(GTK_LIBS)				\
-	$(GCONF_LIBS)				\
 	$(top_builddir)/common-gnome/libnm-l2tp-common-gnome.la
 
 CLEANFILES = *~
