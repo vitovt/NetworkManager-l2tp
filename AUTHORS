@@ -1,4 +1,5 @@
-Alexey Torkhov <atorkhov@gmail.com>
+Vitovt <vitovt@grusha.org.ua> - networkmanager 0.9 port
+Alexey Torkhov <atorkhov@gmail.com> - initial vpn --> l2tp plugin rewrite
 
 Based on NetworkManager-pptp by:
 Antony Mee <eemynotna@gmail.com>
